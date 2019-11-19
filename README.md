@@ -7,4 +7,4 @@ Simple project to showcase:
 * [Istanbul](https://istanbul.js.org/): A library for code coverage
 * [ESLint](https://eslint.org/): A linting utility
 
-[Tutorial](https://developer.ibm.com/tutorials/learn-nodejs-unit-testing-in-nodejs/#get-the-code)
+Credist go to: [Tutorial](https://developer.ibm.com/tutorials/learn-nodejs-unit-testing-in-nodejs/#get-the-code)
