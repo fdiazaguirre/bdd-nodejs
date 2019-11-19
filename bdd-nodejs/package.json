@@ -1,0 +1,21 @@
+{
+  "name": "bdd-nodejs",
+  "version": "1.0.0",
+  "description": "Mocha, Sinon, Istanbul",
+  "main": "logger.js",
+  "scripts": {
+    "test": "nyc mocha ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jstevenperry/node-modules"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
+    "nyc": "^14.1.1",
+    "sinon": "^7.5.0"
+  }
+}
