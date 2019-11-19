@@ -1,4 +1,4 @@
-name: Deploy Gatsby Website
+name: Run BDD tests
 
 on: [push]
 
