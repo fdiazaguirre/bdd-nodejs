@@ -1,29 +1,27 @@
-name: Node CI
+name: Deploy Gatsby Website
 
 on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [8.x, 10.x, 12.x]
-
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - shell: bash
-      run: pwd
-    - name: npm install, build, and test
-      working-directory: ../
-      run: |
-        npm ci
-        npm run build --if-present
-        npm test
-      env:
-        CI: true
+      - uses: actions/checkout@v1
+      - name: Set Node.js 12.x
+        uses: actions/setup-node@master
+        with:
+          node-version: 12.x
+
+      - name: Build site assets
+        working-directory: ${{ github.workspace }}
+        run: ls -la
+
+      - name: Install dependencies
+        working-directory: bdd-nodejs
+        run: |
+          npm install
+
+      - name: Test
+        working-directory: bdd-nodejs
+        run: |
+          npm run test
