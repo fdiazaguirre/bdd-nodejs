@@ -17,6 +17,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - shell: bash
+      run: pwd
     - name: npm install, build, and test
       working-directory: ../
       run: |
